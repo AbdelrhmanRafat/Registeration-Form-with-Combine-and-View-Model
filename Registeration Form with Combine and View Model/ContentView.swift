@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var username = ""
-    @State private var password = ""
-    @State private var passwordConfirm = ""
+    @ObservedObject private var userRegisterationViewModel = UserRegisterationViewModel()
     var body: some View {
         VStack {
             HeaderView()
-            UserNameView(username: $username)
-            PasswordView(password: $password, passwordConfirm: $passwordConfirm)
+            UserNameView(userRegisterationViewModel: userRegisterationViewModel)
+            PasswordView(userRegisterationViewModel: userRegisterationViewModel)
+            PasswordConfirmView(userRegisterationViewModel: userRegisterationViewModel)
             Button(action: {
                 // To Next Screen
             }) {
@@ -92,25 +91,29 @@ struct HeaderView : View {
     }
 }
 struct UserNameView : View {
-    @Binding var username : String
+    @ObservedObject var userRegisterationViewModel : UserRegisterationViewModel
     var body: some View {
-        FormField(fieldName: "UserName", fieldValue: $username)
-        RequirmentText(text:"A minimum of 4 characters")
+        FormField(fieldName: "UserName", fieldValue: $userRegisterationViewModel.username)
+        RequirmentText(iconColor: userRegisterationViewModel.isUserNameLengthValid ? Color.secondary : Color(red: 251/255, green: 128/255, blue: 128/255),text: "A minimum of 4 characters",isStrikeThrough: userRegisterationViewModel.isUserNameLengthValid)
             .padding()
     }
 }
 struct PasswordView : View {
-    @Binding var password : String
-    @Binding var passwordConfirm : String
+    @ObservedObject var userRegisterationViewModel : UserRegisterationViewModel
     var body: some View {
-        FormField(fieldName: "Password", fieldValue: $password, isSecure: true)
+        FormField(fieldName: "Password", fieldValue: $userRegisterationViewModel.password, isSecure: true)
         VStack(spacing: 5) {
-            RequirmentText(iconName: "lock.open", text: "A minimum of 8 characters", isStrikeThrough: false)
-            RequirmentText(iconName: "lock.open", text: "One Uppercase Letter", isStrikeThrough: false)
+            RequirmentText(iconName: "lock.open",iconColor: userRegisterationViewModel.isPasswordLengthValid ? Color.secondary : Color(red: 251/255, green: 128/255, blue: 128/255), text: "A minimum of 8 characters", isStrikeThrough: userRegisterationViewModel.isPasswordLengthValid)
+            RequirmentText(iconName: "lock.open", iconColor: userRegisterationViewModel.isPasswordCapitalLetter ? Color.secondary : Color(red: 251/255, green: 128/255, blue: 128/255), text: "One Uppercase Letter", isStrikeThrough: userRegisterationViewModel.isPasswordCapitalLetter)
         }
         .padding()
-        FormField(fieldName: "Confirm Password", fieldValue: $passwordConfirm, isSecure: true)
-        RequirmentText(text:"Your confirm password should be the same as password",isStrikeThrough: false)
+    }
+}
+struct PasswordConfirmView : View {
+    @ObservedObject var userRegisterationViewModel : UserRegisterationViewModel
+    var body: some View {
+        FormField(fieldName: "Confirm Password", fieldValue: $userRegisterationViewModel.passwordConfirm, isSecure: true)
+        RequirmentText(iconColor: userRegisterationViewModel.isPasswordConfirmValid ? Color.secondary : Color(red: 251/255, green: 128/255, blue: 128/255), text:"Your confirm password should be the same as password", isStrikeThrough: userRegisterationViewModel.isPasswordConfirmValid)
             .padding()
             .padding(.bottom,50)
     }
