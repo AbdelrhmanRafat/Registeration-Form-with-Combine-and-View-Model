@@ -14,6 +14,7 @@
 		FA085506298FC943009FC660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA085505298FC943009FC660 /* Assets.xcassets */; };
 		FA085509298FC943009FC660 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA085508298FC943009FC660 /* Preview Assets.xcassets */; };
 		FA08550C298FC943009FC660 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA08550A298FC943009FC660 /* LaunchScreen.storyboard */; };
+		FA08551529911503009FC660 /* UserRegisterationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08551429911503009FC660 /* UserRegisterationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FA085508298FC943009FC660 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA08550B298FC943009FC660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA08550D298FC943009FC660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA08551429911503009FC660 /* UserRegisterationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				FA0854FC298FC93A009FC660 /* AppDelegate.swift */,
 				FA0854FE298FC93A009FC660 /* SceneDelegate.swift */,
 				FA085500298FC93A009FC660 /* ContentView.swift */,
+				FA08551429911503009FC660 /* UserRegisterationViewModel.swift */,
 				FA085505298FC943009FC660 /* Assets.xcassets */,
 				FA08550A298FC943009FC660 /* LaunchScreen.storyboard */,
 				FA08550D298FC943009FC660 /* Info.plist */,
@@ -150,6 +153,7 @@
 			files = (
 				FA0854FD298FC93A009FC660 /* AppDelegate.swift in Sources */,
 				FA085504298FC93A009FC660 /* Registeration_Form_with_Combine_and_View_Model.xcdatamodeld in Sources */,
+				FA08551529911503009FC660 /* UserRegisterationViewModel.swift in Sources */,
 				FA0854FF298FC93A009FC660 /* SceneDelegate.swift in Sources */,
 				FA085501298FC93A009FC660 /* ContentView.swift in Sources */,
 			);
