@@ -3,12 +3,13 @@
 ![enter image description here](https://i.postimg.cc/FzNn3SJJ/Screen-Shot-2023-03-21-at-6-14-26-PM.png)
 
 ## Table of Contents
+
 **1**  **Introduction For Application and Document**
 **2**  **Implementation of the application interface**
 **3**  **About  MVVM Design Pattern**
- **4** **Brief about Combine Framework**
- **5** **User Registration View Model**
- **6** **Connect view model with view**
+**4**  **Brief about Combine Framework**
+**5**  **User Registration View Model**
+**6**  **Connect view model with view**
 
 ## Introduction For Application and Document
 It's very common to have a user registration Form for people to sign up an account. This Repo Represent how you will implement the form validation Using Combine Frame Work and MVVM Design Pattern.
