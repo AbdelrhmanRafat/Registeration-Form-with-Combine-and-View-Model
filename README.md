@@ -45,7 +45,9 @@ Form Field --> Struct represent view of Text Field.
 Requirement Text --> Struct Represent view of text under Text Field.
 
 The reason for prefixing username with $Username to get binding from state variable and you will get to know what’s mean by binding when I came to demonstrate Form Field View.
+
 ![enter image description here](https://i.postimg.cc/6qfvW0DH/Picture4.png)
+
 
 **Form Field**
 I will just focus on @binding var fieldValue Property
