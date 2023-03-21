@@ -50,6 +50,7 @@ The reason for prefixing username with $Username to get binding from state varia
 
 
 **Form Field**
+
 I will just focus on @binding var fieldValue Property
 
 When property is annotate by @binding it indicates that the caller must provide the binding of the state variable by doing so it’s just like creating two way connection between (username) variables in content view and fieldValue in FormField View.
