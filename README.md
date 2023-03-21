@@ -58,14 +58,20 @@ When property is annotate by @binding it indicates that the caller must provide 
 Then It comes with VStack Container. Represent Secure Field or Text Field based on isSecure Boolean value.
 
 Text Field --> is initiated with field name and binding this renders an editable text field with the user’s input stored in your given binding.
+
 Secure Field --> same as text field except that Secure field automatically masks the user’s input.
+
 Divider --> Create a line use frame modifier to control it’s dimensions.
+
+
 ![enter image description here](https://i.postimg.cc/QM7kLpxz/Picture6.png)
 
 **Requirement Text View**
+
 Hstack Container contains Image and text and also Spacer
 
 Spacer --> In UIKit, you would define auto layout constraints to position the views Swift UI doesn’t have auto layouts instead it provides view called spacer.
+
 ![enter image description here](https://i.postimg.cc/TwGkCkq0/Picture7.png)
 
 **Sign Up Button**
