@@ -5,10 +5,15 @@
 ## Table of Contents
 
 **1**  **Introduction For Application and Document**
+
 **2**  **Implementation of the application interface**
+
 **3**  **About  MVVM Design Pattern**
+
 **4**  **Brief about Combine Framework**
+
 **5**  **User Registration View Model**
+
 **6**  **Connect view model with view**
 
 ## Introduction For Application and Document
