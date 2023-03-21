@@ -141,13 +141,17 @@ By implementing this protocol, the object can serve as a publisher that emits th
 Those subscribers that monitor the value change will get notified.
 
 The first three Properties (username, Password, Password Confirm) are annotated by @Published You may wonder @Published works pretty much like @State in SwiftUI. While it works pretty much the same for this example, @State can only apply to properties that belong to a specific SwiftUI view. If you want to create a custom type that doesn't belong to a specific view or that can be used among multiple views, you need to create a class that conforms to ObservableObject and mark those properties with the @Published annotation. Those properties will be the binding values of text fields and subscriber will receive these values listen to changes and triggers event based on the publisher value.
+
 ![enter image description here](https://i.postimg.cc/nzvxgwDP/Picture10.png)
+
 The other Boolean values are output values computed based on input values, The output values are also annotated with @Published. This is because when the view subscribes to these values, get notified and recomputes itself and updates the view accordingly.
 
 **Let’s define the process again briefly before we discuss the Validation Function.**
 
 What we need to do is to Update view when User Enters value in Text fields using Publisher and subscriber concept.
+
 ![enter image description here](https://i.postimg.cc/ZqSVj7JR/Picture11.png)
+
 **Validation Function is the Missing Piece**
 
 _username_ and _isUsernameLengthValid are both annotated by @Published but they are found in two different places in block diagram_
@@ -157,7 +161,9 @@ The username publisher emits value changes whenever the user keys in a keystroke
 Nearly all controls in SwiftUI are subscribers, so the requirement text view will listen to the change of validation result and update its style
 
 **Validation Function**
+
 ![enter image description here](https://i.postimg.cc/RFc4wgQ4/Picture12.png)
+
 The First line sets up the publisher to listen for changes in the `$username` value, and ensures that the subscriber receives values on the main thread.
 
 The `map` operator takes the input value and transforms it into a Boolean value that indicates whether the length of the username is greater than or equal to 4 characters.
@@ -169,12 +175,14 @@ The `store` function saves the cancellable reference into a set, which allows it
 ## Connect view model with view
 
 ![enter image description here](https://i.postimg.cc/x8c5W4xS/Picture13.png)
+
 We Substitute all state properties by @ObservedObject to User Registration view model
 In the Combine framework, `@ObservedObject` is a property wrapper that allows a SwiftUI view to observe changes to an instance of an observable object. An observable object is a class that conforms to the `ObservableObject` protocol, which allows it to publish changes to its properties when they are updated.
 
 When a view is marked with `@ObservedObject`, it subscribes to the observable object and is automatically updated whenever the object's properties change. This allows the view to stay in sync with the object's state and update its contents accordingly.
 
 After the View Subscribe to View Model Properties
+
 ![enter image description here](https://i.postimg.cc/kGvSYF9d/Picture14.png)
 
 The View Could easily subscribe to publisher properties and update it self accordingly.
