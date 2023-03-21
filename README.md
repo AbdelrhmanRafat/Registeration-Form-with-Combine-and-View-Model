@@ -87,9 +87,13 @@ Text with white color and Gradient Background, the order of modifiers is very Im
 In Swift UI you can easily add Gradient background all you need is to add Linear Gradient argument for background.
 
 ![enter image description here](https://i.postimg.cc/0QMpGDhn/Picture8.png)
+
 **Sign In Button**
+
 Finally Inside H-Stack Container there’s Text and Button.
+
 ![enter image description here](https://i.postimg.cc/fRSDNL4F/Picture9.png)
+
 Enough about Interface and let's dive into Code Actions which will be written in User Registration View model but First I will introduce to you brief about MVVM and Combine Frame work.
 
 ## About MVVM Design Pattern
