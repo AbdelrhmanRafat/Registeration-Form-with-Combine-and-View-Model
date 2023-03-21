@@ -27,9 +27,11 @@ This document will discuss every line of code regarding the implementation of th
 First there’s 3 Variables annotated with @State  private
 
 Swift UI comes with built in features for state management in particular it introduce a property wrapper named @state,
-
 When state changes swift UI will recompute these views and update application.
+
 ![enter image description here](https://i.postimg.cc/T30MG6yg/Picture3.png)
+
+
 (Username, Password, Password Confirm) hold data that User will enter in Text fields.
 
 You can only access @state property from inside the view’s body or from function called by it for this reason you should declare your @state properties as private to prevent clients of your view from accessing it.
