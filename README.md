@@ -39,7 +39,9 @@ You can only access @state property from inside the view’s body or from functi
 Then you start Implementing layout inside view’s body with VStack Container That’s contain all Objects each object is customized by modifiers.
 
 Text --> Object Represent Read Only information on Screen.
+
 Form Field --> Struct represent view of Text Field.
+
 Requirement Text --> Struct Represent view of text under Text Field.
 
 The reason for prefixing username with $Username to get binding from state variable and you will get to know what’s mean by binding when I came to demonstrate Form Field View.
